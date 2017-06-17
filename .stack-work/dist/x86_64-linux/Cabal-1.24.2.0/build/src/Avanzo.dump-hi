@@ -1,0 +1,478 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-17 10:44:19.333907 UTC
+
+interface avanzo-0.1.0.0-JyZwtKmUwyS5XMr2PCQJuD:Avanzo 8002
+  interface hash: d33d47d1c1c20847ce71eafc0cc5b80e
+  ABI hash: 16e932539faa2120167a1b9974bafc08
+  export-list hash: 770841d110f74d13899150308a621a26
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Avanzo.annualize
+  Avanzo.presentValue
+  Avanzo.CashFlow{Avanzo.CashFlow amount date}
+  Avanzo.DiscountRate
+  Avanzo.Time0
+  Avanzo.Years
+module dependencies:
+package dependencies: Decimal-0.4.2@Decimal-0.4.2-HO1LSU7IWQc9gAaO60ocX0
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 time-1.6.0.1@time-1.6.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+import  -/  Decimal-0.4.2@Decimal-0.4.2-HO1LSU7IWQc9gAaO60ocX0:Data.Decimal 26a1d4940ccb9534ccb5241406b6c53c
+import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Float 33e2b9ffe427edd6a5c2fd6a3b26703c
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time 2005a60506050a7089ec50a535292ccc
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTC a11128e40404d4167f29d45f57b1b0af
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTCDiff d9518d0691cef9c7d8de03406284b7c2
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fEqCashFlow :: GHC.Classes.Eq Avanzo.CashFlow
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Avanzo.CashFlow
+                  Avanzo.$fEqCashFlow_$c==
+                  Avanzo.$fEqCashFlow_$c/= -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fEqCashFlow_$c/= ::
+    Avanzo.CashFlow -> Avanzo.CashFlow -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(S(SL)L),1*U(1*U(1*U,1*U),1*U(U,U))><S(S(SL)L),1*U(1*U(1*U,1*U),1*U(U,U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Avanzo.CashFlow) (b :: Avanzo.CashFlow) ->
+                 case Avanzo.$fEqCashFlow_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fEqCashFlow_$c== ::
+    Avanzo.CashFlow -> Avanzo.CashFlow -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(S(SL)L),1*U(1*U(1*U,1*U),1*U(U,U))><S(S(SL)L),1*U(1*U(1*U,1*U),1*U(U,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Avanzo.CashFlow) (w1 :: Avanzo.CashFlow) ->
+                 case w of ww { Avanzo.CashFlow ww1 ww2 ->
+                 case ww1 of ww3 { Data.Time.Clock.UTC.UTCTime ww4 ww5 ->
+                 case w1 of ww6 { Avanzo.CashFlow ww7 ww8 ->
+                 case ww7 of ww9 { Data.Time.Clock.UTC.UTCTime ww10 ww11 ->
+                 Avanzo.$w$c== ww4 ww5 ww2 ww10 ww11 ww8 } } } }) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fShowCashFlow :: GHC.Show.Show Avanzo.CashFlow
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Avanzo.CashFlow
+                  Avanzo.$fShowCashFlow_$cshowsPrec
+                  Avanzo.$fShowCashFlow_$cshow
+                  Avanzo.$fShowCashFlow_$cshowList -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fShowCashFlow1 :: Avanzo.CashFlow -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ (w :: Avanzo.CashFlow) ->
+                 case w of ww { Avanzo.CashFlow ww1 ww2 ->
+                 Avanzo.$w$cshowsPrec 0# ww1 ww2 }) -}
+5d3a44241473e2d7a0a3896ea2332158
+  $fShowCashFlow2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+b087429fbd4aaa16e86a5e36b13bda22
+  $fShowCashFlow3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "amount = "#) -}
+e51af47ce7e9b909f3691234ac590bdb
+  $fShowCashFlow4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+a323a2cecb35b918ce9cc2b3561f6ac4
+  $fShowCashFlow5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "date = "#) -}
+8a637f5e459ed3afb7b5cb6e1fa51562
+  $fShowCashFlow6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CashFlow {"#) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fShowCashFlow_$cshow :: Avanzo.CashFlow -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U,U),1*U(1*U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Avanzo.CashFlow) ->
+                 Avanzo.$fShowCashFlow_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fShowCashFlow_$cshowList :: [Avanzo.CashFlow] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Avanzo.CashFlow
+                   Avanzo.$fShowCashFlow1) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  $fShowCashFlow_$cshowsPrec ::
+    GHC.Types.Int -> Avanzo.CashFlow -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(U(U,U),1*U(1*U,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Avanzo.CashFlow) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Avanzo.CashFlow ww3 ww4 ->
+                 Avanzo.$w$cshowsPrec ww1 ww3 ww4 } }) -}
+08fe67f7ee36a2260451101dde85a65d
+  $tc'CashFlow :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18446213009263676407##
+                   15541839765270747608##
+                   Avanzo.$trModule
+                   Avanzo.$tc'CashFlow1) -}
+79831c265aea0ac7c10e4d2c299ef8e5
+  $tc'CashFlow1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'CashFlow"#) -}
+dba5df4edb189c64b20bef5db1ec82cb
+  $tcCashFlow :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   439976023346484377##
+                   1560361472562464036##
+                   Avanzo.$trModule
+                   Avanzo.$tcCashFlow1) -}
+732d3b7b9bc373a111b997e234af66a7
+  $tcCashFlow1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "CashFlow"#) -}
+5968043d10143183c5e344c8ba62bd19
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Avanzo.$trModule2
+                   Avanzo.$trModule1) -}
+8f54471962bbf815aa3321f611d1ccf8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Avanzo"#) -}
+3eaf37518993bdb2044a7e3d28270bdf
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "avanzo-0.1.0.0-JyZwtKmUwyS5XMr2PCQJuD"#) -}
+eb88769d7337ea0cc971e02c0219ecdf
+  $w$c== ::
+    Data.Time.Calendar.Days.Day
+    -> Data.Time.Clock.Scale.DiffTime
+    -> Data.Decimal.Decimal
+    -> Data.Time.Calendar.Days.Day
+    -> Data.Time.Clock.Scale.DiffTime
+    -> Data.Decimal.Decimal
+    -> GHC.Types.Bool
+  {- Arity: 6,
+     Strictness: <S,1*U><L,1*U><L,1*U(U,U)><S,1*U><L,1*U><L,1*U(U,U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Data.Time.Calendar.Days.Day)
+                   (ww1 :: Data.Time.Clock.Scale.DiffTime)
+                   (ww2 :: Data.Decimal.Decimal)
+                   (ww3 :: Data.Time.Calendar.Days.Day)
+                   (ww4 :: Data.Time.Clock.Scale.DiffTime)
+                   (ww5 :: Data.Decimal.Decimal) ->
+                 case GHC.Integer.Type.eqInteger#
+                        ww `cast` (Data.Time.Calendar.Days.N:Day[0])
+                        ww3 `cast` (Data.Time.Calendar.Days.N:Day[0]) of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Integer.Type.eqInteger#
+                             ww1
+                               `cast`
+                             (Trans
+                                  (Data.Time.Clock.Scale.N:DiffTime[0])
+                                  (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                             ww4
+                               `cast`
+                             (Trans
+                                  (Data.Time.Clock.Scale.N:DiffTime[0])
+                                  (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P)) of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> Data.Decimal.$fEqDecimalRaw_$c==
+                             @ GHC.Integer.Type.Integer
+                             GHC.Real.$fIntegralInteger
+                             ww2
+                             ww5 } } } }) -}
+e976d92d0d753510a87d0c96624bd61f
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Data.Time.Clock.UTC.UTCTime
+    -> Data.Decimal.Decimal
+    -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,U><L,U(U,U)><L,1*U(1*U,U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Data.Time.Clock.UTC.UTCTime)
+                   (ww2 :: Data.Decimal.Decimal) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = case ww2 of ww3 { Data.Decimal.Decimal ww4 ww5 ->
+                     Data.Decimal.$w$cshowsPrec
+                       @ GHC.Integer.Type.Integer
+                       GHC.Real.$fIntegralInteger
+                       GHC.Show.$fShowInteger
+                       ww4
+                       ww5 }
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Avanzo.$fShowCashFlow6
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Avanzo.$fShowCashFlow5
+                          (case ww1 of ww3 { Data.Time.Clock.UTC.UTCTime ww4 ww5 ->
+                           Data.Time.LocalTime.LocalTime.$w$cshowsPrec1
+                             ww4
+                             ww5
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Avanzo.$fShowCashFlow4
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Avanzo.$fShowCashFlow3
+                                   (f (GHC.Base.++ @ GHC.Types.Char Avanzo.$fShowCashFlow2 x)))) }))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }) -}
+cf14046a4e4647a9ea10915ddc97b48b
+  $wannualize ::
+    Data.Time.Clock.UTC.NominalDiffTime -> GHC.Prim.Float#
+  {- Arity: 1, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (w :: Data.Time.Clock.UTC.NominalDiffTime) ->
+                 case GHC.Real.$w$s$c/
+                        w `cast`
+                        (Trans
+                             (Data.Time.Clock.UTC.N:NominalDiffTime[0])
+                             (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                        GHC.Real.$fEnumRatio1
+                        Data.Fixed.$fHasResolutionE5
+                        GHC.Real.$fEnumRatio1 of ww { (#,#) ww1 ww2 ->
+                 case GHC.Float.rationalToFloat ww1 ww2 of wild { GHC.Types.F# x ->
+                 GHC.Prim.divideFloat# x 3.1536e7# } }) -}
+a0016883622fd905cef968e944caa31b
+  $wpresentValue ::
+    Data.Time.Calendar.Days.Day
+    -> Data.Time.Clock.Scale.DiffTime
+    -> Avanzo.DiscountRate
+    -> Data.Time.Calendar.Days.Day
+    -> Data.Time.Clock.Scale.DiffTime
+    -> Data.Decimal.Decimal
+    -> Data.Either.Either
+         GHC.Base.String (Data.Decimal.DecimalRaw GHC.Integer.Type.Integer)
+  {- Arity: 6,
+     Strictness: <S,U><L,U><L,1*U(U)><S,U><L,U><L,1*U(1*U,U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Data.Time.Calendar.Days.Day)
+                   (ww1 :: Data.Time.Clock.Scale.DiffTime)
+                   (w :: Avanzo.DiscountRate)
+                   (ww2 :: Data.Time.Calendar.Days.Day)
+                   (ww3 :: Data.Time.Clock.Scale.DiffTime)
+                   (ww4 :: Data.Decimal.Decimal) ->
+                 let {
+                   $j :: GHC.Prim.Void#
+                         -> Data.Either.Either
+                              GHC.Base.String (Data.Decimal.DecimalRaw GHC.Integer.Type.Integer)
+                     {- Arity: 1, Strictness: <L,A> -}
+                   = \ (w1 :: GHC.Prim.Void#)[OneShot] ->
+                     Data.Either.Right
+                       @ GHC.Base.String
+                       @ (Data.Decimal.DecimalRaw GHC.Integer.Type.Integer)
+                       (case ww4 of ww5 { Data.Decimal.Decimal ww6 ww7 ->
+                        case w of wild1 { GHC.Types.F# y ->
+                        case GHC.Real.$w$s$c/
+                               (GHC.Integer.Type.minusInteger
+                                  (Data.Time.Clock.POSIX.$wutcTimeToPOSIXSeconds ww2 ww3)
+                                    `cast`
+                                  (Trans
+                                       (Data.Time.Clock.UTC.N:NominalDiffTime[0])
+                                       (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                                  (Data.Time.Clock.POSIX.$wutcTimeToPOSIXSeconds ww ww1)
+                                    `cast`
+                                  (Trans
+                                       (Data.Time.Clock.UTC.N:NominalDiffTime[0])
+                                       (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P)))
+                               GHC.Real.$fEnumRatio1
+                               Data.Fixed.$fHasResolutionE5
+                               GHC.Real.$fEnumRatio1 of ww8 { (#,#) ww9 ww10 ->
+                        case GHC.Float.rationalToFloat ww9 ww10 of wild { GHC.Types.F# x ->
+                        case Avanzo.presentValue3 of wild2 { GHC.Types.F# y1 ->
+                        case {__pkg_ccall base-4.9.1.0 rintFloat GHC.Prim.Float#
+                                                                 -> GHC.Prim.State#
+                                                                      GHC.Prim.RealWorld
+                                                                 -> (# GHC.Prim.State#
+                                                                         GHC.Prim.RealWorld,
+                                                                       GHC.Prim.Float# #)}
+                               (GHC.Prim.timesFloat#
+                                  (GHC.Prim.powerFloat#
+                                     (GHC.Prim.plusFloat# 1.0# y)
+                                     (GHC.Prim.divideFloat# x 3.1536e7#))
+                                  y1)
+                               GHC.Prim.realWorld# of wild3 { (#,#) ds3 ds4 ->
+                        case GHC.Prim.decodeFloat_Int# ds4 of ds { (#,#) ipv ipv1 ->
+                        case case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.<# ipv1 0#) of wild4 {
+                               GHC.Types.False
+                               -> GHC.Integer.Type.shiftLInteger
+                                    (GHC.Integer.Type.smallInteger ipv)
+                                    ipv1
+                               GHC.Types.True
+                               -> GHC.Integer.Type.smallInteger
+                                    (GHC.Prim.uncheckedIShiftRA#
+                                       ipv
+                                       (GHC.Prim.negateInt# ipv1)) } of dt { DEFAULT ->
+                        case Data.Decimal.$w$c/
+                               @ GHC.Integer.Type.Integer
+                               GHC.Real.$fIntegralInteger
+                               ww6
+                               ww7
+                               5##
+                               dt of ww11 { (#,#) ww12 ww13 ->
+                        case Data.Decimal.$wroundTo
+                               @ GHC.Integer.Type.Integer
+                               GHC.Real.$fIntegralInteger
+                               2##
+                               ww12
+                               ww13 of ww14 { (#,#) ww15 ww16 ->
+                        Data.Decimal.Decimal
+                          @ GHC.Integer.Type.Integer
+                          ww15
+                          ww16 } } } } } } } } } })
+                 } in
+                 case GHC.Integer.Type.compareInteger
+                        ww `cast` (Data.Time.Calendar.Days.N:Day[0])
+                        ww2 `cast` (Data.Time.Calendar.Days.N:Day[0]) of wild {
+                   GHC.Types.LT -> $j GHC.Prim.void#
+                   GHC.Types.EQ
+                   -> case GHC.Integer.Type.compareInteger
+                             ww1
+                               `cast`
+                             (Trans
+                                  (Data.Time.Clock.Scale.N:DiffTime[0])
+                                  (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                             ww3
+                               `cast`
+                             (Trans
+                                  (Data.Time.Clock.Scale.N:DiffTime[0])
+                                  (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P)) of wild1 {
+                        DEFAULT -> Avanzo.presentValue1 GHC.Types.LT -> $j GHC.Prim.void# }
+                   GHC.Types.GT -> Avanzo.presentValue1 }) -}
+1ab564cd6987ae8fae1a98b89bd79cc6
+  data CashFlow
+    = CashFlow {date :: Data.Time.Clock.UTC.UTCTime,
+                amount :: Data.Decimal.Decimal}
+c6d2cfae5d12ca9d77ed18026a44094b
+  type DiscountRate = GHC.Types.Float
+3015cbc711c08606e8b886e2778e9ba0
+  type Time0 = Data.Time.Clock.UTC.UTCTime
+c28ea9160030df67fc354aa738c0100a
+  type Years = GHC.Types.Float
+982e7b3c981cd7cf014ab8a1760a8572
+  amount :: Avanzo.CashFlow -> Data.Decimal.Decimal
+  RecSel Left Avanzo.CashFlow
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Avanzo.CashFlow) ->
+                 case ds of wild { Avanzo.CashFlow ds1 ds2 -> ds2 }) -}
+0503d183d420692ec21dbca60d3cf8cd
+  annualize :: Data.Time.Clock.UTC.NominalDiffTime -> Avanzo.Years
+  {- Arity: 1, Strictness: <S,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Data.Time.Clock.UTC.NominalDiffTime) ->
+                 case Avanzo.$wannualize w of ww { DEFAULT -> GHC.Types.F# ww }) -}
+213a84e4dde2dd1268897dff67e41ed5
+  date :: Avanzo.CashFlow -> Data.Time.Clock.UTC.UTCTime
+  RecSel Left Avanzo.CashFlow
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Avanzo.CashFlow) ->
+                 case ds of wild { Avanzo.CashFlow ds1 ds2 -> ds1 }) -}
+099d11dce4052bcf2312b131e2275c35
+  presentValue ::
+    Avanzo.Time0
+    -> Avanzo.DiscountRate
+    -> Avanzo.CashFlow
+    -> Data.Either.Either GHC.Base.String Data.Decimal.Decimal
+  {- Arity: 3,
+     Strictness: <S(SL),1*U(U,U)><L,1*U(U)><S(S(SL)L),1*U(1*U(U,U),1*U(1*U,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Avanzo.Time0)
+                   (w1 :: Avanzo.DiscountRate)
+                   (w2 :: Avanzo.CashFlow) ->
+                 case w of ww { Data.Time.Clock.UTC.UTCTime ww1 ww2 ->
+                 case w2 of ww3 { Avanzo.CashFlow ww4 ww5 ->
+                 case ww4 of ww6 { Data.Time.Clock.UTC.UTCTime ww7 ww8 ->
+                 Avanzo.$wpresentValue ww1 ww2 w1 ww7 ww8 ww5 } } }) -}
+e5511e67c5b5911cc3e122a6ae350403
+  presentValue1 ::
+    Data.Either.Either [GHC.Types.Char] Data.Decimal.Decimal
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ [GHC.Types.Char]
+                   @ Data.Decimal.Decimal
+                   Avanzo.presentValue2) -}
+87e2461d39cf606a3220487f93a9c3b0
+  presentValue2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Time0 must be < the Cash Flow date"#) -}
+1af681468a8551ec7490a1e4c7e66e67
+  presentValue3 :: Avanzo.DiscountRate
+  {- Unfolding: (GHC.Real.^
+                   @ Avanzo.DiscountRate
+                   @ GHC.Word.Word8
+                   GHC.Float.$fNumFloat
+                   GHC.Word.$fIntegralWord8
+                   Avanzo.presentValue5
+                   Avanzo.presentValue4) -}
+ffd59bcb1543dfaa2a6d7e9b35c79202
+  presentValue4 :: GHC.Word.Word8
+  {- HasNoCafRefs, Unfolding: (GHC.Word.W8# 5##) -}
+d9ae9baa3ab8287af1c6b7db486b26ab
+  presentValue5 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 10.0#) -}
+instance [safe] GHC.Classes.Eq [Avanzo.CashFlow]
+  = Avanzo.$fEqCashFlow
+instance [safe] GHC.Show.Show [Avanzo.CashFlow]
+  = Avanzo.$fShowCashFlow
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
