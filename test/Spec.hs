@@ -1,5 +1,5 @@
 import Test.Hspec
-import Avanzo
+import Avanzo (CashFlow(CashFlow), presentValue)
 import Data.Time
 import Data.Decimal
 
