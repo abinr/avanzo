@@ -2,7 +2,8 @@ module Avanzo where
 
 import Data.Decimal
 import Data.Time
-import Data.List
+import Prelude hiding (head)
+import Data.List.NonEmpty
 
 data CashFlow = CashFlow
   { date :: UTCTime
@@ -29,16 +30,12 @@ annualize :: NominalDiffTime -> Years
 annualize n =
   realToFrac n / (365 * 24 * 60 * 60)
 
-npv :: DiscountRate -> [CashFlow] -> Either String Decimal
+npv :: DiscountRate -> NonEmpty CashFlow -> Either String Decimal
 npv rate flows =
-  case flows of
-    [] ->
-      Left "CashFlows list is empty"
-    (_) ->
       let
         sortedFlows = sortBy orderCashFlowsByDate flows
         t0 = date $ head sortedFlows
-        ps = sequenceA $ fmap (presentValue t0 rate) sortedFlows
+        ps = traverse (presentValue t0 rate) sortedFlows
       in
         case ps of
           Right ps' ->
