@@ -6,6 +6,7 @@ import Data.Decimal
 main :: IO ()
 main = hspec $ do
   describe "present value" $ do
+
     it "1100 should be 1000 at 10% discount" $ do
       t0 <- getCurrentTime
       let t1 = UTCTime (addDays 365 (utctDay t0)) (utctDayTime t0)

@@ -6,14 +6,18 @@ import Prelude hiding (head)
 import Data.List.NonEmpty
 
 data CashFlow = CashFlow
-  { date :: UTCTime
+  { presentDate :: UTCTime
+  , date :: UTCTime
   , amount :: Decimal
   } deriving (Eq, Show)
 
+instance Ord CashFlow where
+  compare a b = compare (date a) (date b)
 
 type DiscountRate = Float
 type Time0 = UTCTime
 type Years = Float
+
 
 presentValue :: Time0 -> DiscountRate -> CashFlow -> Either String Decimal
 presentValue t0 r cf =
@@ -33,7 +37,7 @@ annualize n =
 npv :: DiscountRate -> NonEmpty CashFlow -> Either String Decimal
 npv rate flows =
       let
-        sortedFlows = sortBy orderCashFlowsByDate flows
+        sortedFlows = sort flows
         t0 = date $ head sortedFlows
         ps = traverse (presentValue t0 rate) sortedFlows
       in
@@ -43,11 +47,7 @@ npv rate flows =
           Left t ->
             Left t
 
-orderCashFlowsByDate :: CashFlow -> CashFlow -> Ordering
-orderCashFlowsByDate a b =
-  compare (date a) (date b)
-
-
+{--
 testData =
   [ CashFlow (UTCTime (fromGregorian 2017 06 17) 45000) (Decimal 2 $ -200000)
   , CashFlow (UTCTime (fromGregorian 2018 06 17) 45000) (Decimal 2 10000)
@@ -55,4 +55,5 @@ testData =
   , CashFlow (UTCTime (fromGregorian 2020 06 17) 45000) (Decimal 2 10000)
   , CashFlow (UTCTime (fromGregorian 2020 06 17) 45000) (Decimal 2 250000)
   ]
+--}
 
